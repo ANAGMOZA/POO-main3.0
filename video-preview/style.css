@@ -123,3 +123,11 @@ body {
     font-size: 1.2rem;
     font-weight: 900;
 }
+
+.videoGrande {
+    transition: transform 0.5s ease; /* Suaviza la animación */
+}
+
+.tituloGrande {
+    transition: transform 0.5s ease; /* Suaviza la animación del título */
+}

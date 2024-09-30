@@ -1,20 +1,24 @@
 console.log("page loaded...");
 
-function playVideo(videoSmall1){
-    //video.play();
+function playVideo(videoSmall){
     var videoGrande = document.getElementById("videoGrande");
     var temp = videoGrande.src;
-    videoGrande.src = videoSmall1.src;
+    videoGrande.src = videoSmall.src;
     videoGrande.play();
-    videoSmall1.src = temp;
+    videoSmall.src = temp;
+    
+    // Actualiza el título del video grande
+    var videoTitle = document.getElementById("tituloGrande");
+    var newTitle = videoSmall.parentElement.querySelector(".video-title").textContent;
+    console.log(newTitle);
+    console.log(videoTitle);
+    videoTitle.textContent = newTitle;
+    newTitle.parentElement.querySelector(".video-title").textContent = videoTitle.textContent;
 }
 
-function pauseVideo(video){
-    //video.pause();
-    //video.currentTime = 0; vuelve el video al inicio
-    var videoGrande = document.getElementById(videoGrande);
-    var tempSrc = videoSmall1.src;
-    videoSmall1.src = videoGrande.src;
-    videoGrande.play();
-    videoGrande.src = temp.src;
+function pauseVideo(){
+    var videoGrande = document.getElementById("videoGrande");
+    var tempSrc = videoGrande.src;
+    videoGrande.src = tempSrc;
+    videoGrande.pause();
 }
