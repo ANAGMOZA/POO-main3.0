@@ -1,45 +1,47 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    height: 100vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .item {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .item1 {
-    order: 3;
-  }
-  
-  .item2 {
-    order: 2;
-  }
-  
-  .item3 {
-    order: 1;
-  }
-  
-  .item4 {
-    order: 4;
-  }
-  
-  .item5 {
-    order: 5;
-  }
+.container {
+  width: 950px; /* ancho */
+  background-color: grey; /* color de fondo */
+  padding: 20px; /* relleno */
+  margin: 0px auto; /* Alinear horizontalmente el contenedor */
+  display: flex; /* Activar flexbox */
+  flex-direction: column; /* Colocar elementos en columna */
+}
+
+.nav {
+  height: 150px; /* Alto del elemento */
+  background-color: green;
+  margin-bottom: 20px; /* Asigna margen inferior */
+}
+
+.main {
+  background-color: red;
+  width: 700px;
+  height: 400px;
+  display: flex; /* Activar flexbox para el área principal */
+  padding: 10px;
+}
+
+.nav-secundario {
+  height: 300px;
+  width: 150px;
+  background-color: blue;
+  margin-right: 20px;
+}
+
+.main-content {
+  display: flex; /* Activar flexbox para los elementos dentro de main */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.yellow {
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+  margin: 10px;
+}
+
+.purple {
+  width: 660px;
+  height: 120px;
+  margin: 10px;
+}
