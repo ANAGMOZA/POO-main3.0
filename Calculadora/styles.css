@@ -1,0 +1,72 @@
+/* Estilos generales para el body */
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    display: flex; /* Utiliza flexbox para centrar */
+    flex-direction: column; /* Coloca el navbar encima de la calculadora */
+    margin: 0; /* Elimina márgenes predeterminados */
+    background-color: #e0f7fa; /* Color de fondo suave */
+}
+
+/* Estilos para el contenedor del navbar */
+#navbar {
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #00796b; /* Color del navbar */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Utiliza flexbox para el navbar */
+    justify-content: center; /* Centra los elementos del navbar */
+}
+
+/* Estilos para los enlaces del navbar */
+#navbar a {
+    color: white; /* Color del texto en el navbar */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 15px; /* Espaciado entre enlaces */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Estilos para la calculadora */
+#calculator {
+    width: 200px;
+    margin: auto; /* Centra la calculadora horizontalmente */
+    border: 2px solid #333; /* Borde del recuadro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 10px; /* Espacio interno alrededor de la calculadora */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Estilos para la pantalla de la calculadora */
+#display {
+    background-color: #f0f0f0;
+    height: 40px;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+}
+
+/* Estilos para las filas de botones */
+.row {
+    display: flex;
+}
+
+/* Estilos para los botones de la calculadora */
+.row button {
+    flex: 1; /* Hace que todos los botones tengan el mismo tamaño */
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+}
+
+/* Cambiar el cursor al pasar sobre los botones de operación */
+.row button.operator:hover {
+    background-color: #f9a825; /* Color al pasar el mouse sobre operadores */
+}
+
+/* Color específico al pasar sobre cualquier botón */
+.row button:hover {
+    background-color: #b2dfdb; /* Color al pasar el mouse sobre cualquier botón */
+}
+
+/* Estilo para el botón igual */
+#equals {
+    background-color: #43a047; /* Color para el botón igual */
+}
