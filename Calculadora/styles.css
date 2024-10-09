@@ -1,12 +1,19 @@
+
 /* Estilos generales para el body */
 html, body {
-    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
-    display: flex; /* Utiliza flexbox para centrar */
-    flex-direction: column; /* Coloca el navbar encima de la calculadora */
-    margin: 0; /* Elimina márgenes predeterminados */
-    background-color: #e0f7fa; /* Color de fondo suave */
+    height: 100%; /* Ocupa toda la altura */
+    display: flex; /* Flexbox para centrar */
+    flex-direction: column; /* Navbar sobre la calculadora */
+    margin: 0; /* Sin márgenes */
+    background-color: #e0f7fa; /* Fondo suave */
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
 /* Estilos para el contenedor del navbar */
 #navbar {
     width: 100%; /* Ocupa todo el ancho */
@@ -68,5 +75,5 @@ html, body {
 
 /* Estilo para el botón igual */
 #equals {
-    background-color: #43a047; /* Color para el botón igual */
+    background-color: #43a047; /*Color para el botón igual */
 }

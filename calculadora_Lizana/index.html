@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div class="calculadora"> <!-- Contenedor padre que va a contener la calculadora-->
+
+        <div class="pantalla" id="pantalla">0</div> <!--Muestra el resultado y la operacion que vamos hacer -->
+
+        <div class="botones"> <!--Este div contiene los botones-->
+            <button class="operador" onclick="operadores('/')">/</button> <!--operador de division-->
+            <button class="operador" onclick="operadores('*')">*</button> <!--operador de multiplicacionn-->
+            <button class="operador" onclick="operadores('-')">-</button> <!--operador de resta-->
+            <button class="operador" onclick="operadores('+')">+</button> <!--operador de suma-->
+
+            <button onclick="numeros('7')">7</button>
+            <button onclick="numeros('8')">8</button>
+            <button onclick="numeros('9')">9</button>
+            <button onclick="numeros('4')">4</button>
+            <button onclick="numeros('5')">5</button>
+            <button onclick="numeros('6')">6</button>
+            <button onclick="numeros('1')">1</button>
+            <button onclick="numeros('2')">2</button>
+            <button onclick="numeros('3')">3</button>
+            <button onclick="numeros('0')">0</button>
+
+            <button class="borrar" id="borrar" onclick="borrar()">Borrar</button> <!-- boton para borrar o limpiar la pantalla -->
+            <button class="igual" onclick="calculo()">Resultado</button> <!-- Arroja el resultado en la pantalla -->
+            <!-- Muestra el resultado de la operacion en la pantalla-->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
