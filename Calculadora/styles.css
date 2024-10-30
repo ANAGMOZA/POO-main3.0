@@ -1,79 +1,214 @@
-
-/* Estilos generales para el body */
-html, body {
-    height: 100%; /* Ocupa toda la altura */
-    display: flex; /* Flexbox para centrar */
-    flex-direction: column; /* Navbar sobre la calculadora */
-    margin: 0; /* Sin márgenes */
-    background-color: #e0f7fa; /* Fondo suave */
-}
-.container {
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+  }
+  
+  /* Navbar */
+  .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
-/* Estilos para el contenedor del navbar */
-#navbar {
-    width: 100%; /* Ocupa todo el ancho */
-    background-color: #00796b; /* Color del navbar */
-    padding: 10px; /* Espaciado interno */
-    display: flex; /* Utiliza flexbox para el navbar */
-    justify-content: center; /* Centra los elementos del navbar */
-}
-
-/* Estilos para los enlaces del navbar */
-#navbar a {
-    color: white; /* Color del texto en el navbar */
-    text-decoration: none; /* Sin subrayado */
-    margin: 0 15px; /* Espaciado entre enlaces */
-    font-size: 18px; /* Tamaño de fuente */
-}
-
-/* Estilos para la calculadora */
-#calculator {
-    width: 200px;
-    margin: auto; /* Centra la calculadora horizontalmente */
-    border: 2px solid #333; /* Borde del recuadro */
-    border-radius: 10px; /* Esquinas redondeadas */
-    padding: 10px; /* Espacio interno alrededor de la calculadora */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-}
-
-/* Estilos para la pantalla de la calculadora */
-#display {
-    background-color: #f0f0f0;
-    height: 40px;
-    text-align: right;
-    padding: 10px;
+    background-color: #000;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar h1 {
     font-size: 24px;
-}
-
-/* Estilos para las filas de botones */
-.row {
+  }
+  
+  .navbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .navbar .signout {
+    background-color: #0096d1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* Contenedor principal */
+  .container {
     display: flex;
-}
-
-/* Estilos para los botones de la calculadora */
-.row button {
-    flex: 1; /* Hace que todos los botones tengan el mismo tamaño */
-    height: 40px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+  
+  /* Perfil */
+  .profile {
+    flex: 2;
+    background-color: white;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    text-align: center;
+    background-color: #00A0D1; /* Color de fondo azul */
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #ffffff;
+  }
+  
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+    color: #ffffff;
+  }
+  
+  .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+  }
+  
+  .location img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  
+  .bio {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  .edit-profile {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #00A0D1;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-profile:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Educación */
+  .education {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-top: 2px solid #000;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .education h3 {
     font-size: 18px;
-    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
-}
-
-/* Cambiar el cursor al pasar sobre los botones de operación */
-.row button.operator:hover {
-    background-color: #f9a825; /* Color al pasar el mouse sobre operadores */
-}
-
-/* Color específico al pasar sobre cualquier botón */
-.row button:hover {
-    background-color: #b2dfdb; /* Color al pasar el mouse sobre cualquier botón */
-}
-
-/* Estilo para el botón igual */
-#equals {
-    background-color: #43a047; /*Color para el botón igual */
-}
+    margin-bottom: 10px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .connection-requests, .connections {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .connection-requests h3, .connections h3 {
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .request {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .request-photo img, .connection-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .request p {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .accept, .reject {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .accept {
+    color: green;
+  }
+  
+  .reject {
+    color: red;
+  }
+  
+  .connections ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .connections ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .view-more {
+    display: block;
+    text-align: right;
+    color: #0096d1;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
